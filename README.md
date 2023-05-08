@@ -19,5 +19,4 @@ Japanese date converter
 Convert DateTime object which is defined as seireki to WrkDate object
 
 
-
 - Wrk to srk
