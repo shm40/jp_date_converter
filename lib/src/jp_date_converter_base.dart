@@ -49,6 +49,21 @@ class WrkDate {
       'date': '${date.year}年${date.month}月${date.day}日',
     });
   }
+
+  String dateString({bool ignoreWrk = false}) {
+    final sb = StringBuffer();
+    if (!ignoreWrk) {
+      sb.write(wrkName);
+    }
+    if (date.year == 1) {
+      sb.write('元年');
+    } else {
+      sb.write('${date.year}年');
+    }
+    sb.write('${date.month}月');
+    sb.write('${date.day}日');
+    return sb.toString();
+  }
 }
 
 /// 西暦表記の日付を和暦表記に変換し、`WrkDate`クラスを返却
